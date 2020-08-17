@@ -9,6 +9,8 @@ import {
     SNOW,
     WINDY,
     FOG,
+    THUNDER,
+    DRIZZLE,
 } from './../../constants/weathers';
 import './styles.css';
 const icons = {
@@ -19,6 +21,8 @@ const icons = {
     [SNOW]: "snow",
     [WINDY]: "windy",
     [FOG]: "fog",
+    [THUNDER]: "day-thunderstore",
+    [DRIZZLE]: "day-showers",
 }
 
 const getWeatherIcon = (weatherState) => {

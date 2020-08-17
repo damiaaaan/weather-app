@@ -1,11 +1,25 @@
 import React from 'react';
-import WeatherLocation from './components/WeatherLocation';
 import './App.css';
+import LocationList from './components/WeatherLocation/LocationList';
+
+const cities = [
+  'Buenos Aires,ar',
+  'Cambridge,gb',
+  'London,gb',
+  'Asuncion,py'
+]
+
 
 function App() {
+
+  const handleLocationSelection = city => {
+    console.log(city)
+  };
+
   return (
     <div className="App">
-      <WeatherLocation />
+      <LocationList cities={cities} 
+      onSelectedLocation={handleLocationSelection} ></LocationList>
     </div>
   );
 }
