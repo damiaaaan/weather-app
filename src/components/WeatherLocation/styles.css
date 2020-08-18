@@ -1,6 +1,10 @@
 
 .weatherLocationCont {
-    width: 400px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 350px;
+    box-sizing: border-box;
     padding: 25px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 10px 10px 40px -12px, rgba(0, 0, 0, 0.75);
@@ -11,7 +15,16 @@
     text-align: left;
     color: #888;
     line-height: 35px;
+    overflow: hidden;
 }
 .locationCont h1 {
     margin: 0;
+    white-space: nowrap;
+}
+@media (max-width: 64em) {
+    .locationList {
+        max-height: 30vh;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
 }
