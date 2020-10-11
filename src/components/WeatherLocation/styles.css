@@ -8,6 +8,7 @@
     padding: 25px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 10px 10px 40px -12px, rgba(0, 0, 0, 0.75);
+    cursor: pointer;   
 }
 .locationCont {
     width: 100%;
@@ -21,10 +22,14 @@
     margin: 0;
     white-space: nowrap;
 }
+.locationList {
+    height: 85vh;
+    overflow: auto;
+}
+
 @media (max-width: 64em) {
     .locationList {
-        max-height: 30vh;
-        overflow: auto;
+        max-height: 45vh;
         margin-bottom: 20px;
     }
 }

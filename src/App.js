@@ -21,12 +21,13 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state = { city: 'Nueva ciudad.' };
+    this.state = { city: null };
   }
 
   handleLocationSelection = city => {
-    console.log(city)
+    this.setState({ city });
   };
+  
   render() {
     const { city } = this.state;
     return (
@@ -48,7 +49,10 @@ class App extends Component {
           <Col xs={12} md={6}>
             <Paper elevation={4}>
               <div className="details">
-                <ForecastExtended city={ city }></ForecastExtended>
+                { 
+                  city && 
+                  <ForecastExtended city={ city }></ForecastExtended>
+                }
               </div>
             </Paper>
           </Col>

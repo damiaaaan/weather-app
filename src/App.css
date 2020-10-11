@@ -39,6 +39,15 @@
 
 .details {
   background: #999999;
-  height: 100vh;
-  width: 100%;
+  height: 85vh;
+  width: calc(100% - 40px);
+  overflow: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (max-width: 64em) {
+  .details {
+    height: 40vh;
+  }
 }
